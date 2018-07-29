@@ -1,7 +1,8 @@
 
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-module.exports = {
+var webpack = require('webpack');
+var config = {
     entry: './app/index.js',
     output:{
         path: path.resolve(__dirname,'dist'),
@@ -21,6 +22,15 @@ module.exports = {
     plugins: [new HtmlWebpackPlugin({
         template: 'app/index.html'
 
-    })]
-}
+    })
+
+    ],
+        mode: process.env.NODE_ENV === 'production'? 'production' : 'devlopment'
+};
+
+
+
+
+
+module.exports = config;
 
