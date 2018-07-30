@@ -25,7 +25,7 @@ var config = {
     })
 
     ],
-        mode: process.env.NODE_ENV === 'production'? 'production' : 'devlopment'
+        mode: process.env.NODE_ENV === 'production'? 'production' : 'development'
 };
 
 
